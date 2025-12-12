@@ -1,6 +1,6 @@
 {
-  "name": "appium-webdriveragent",
-  "version": "10.4.2",
+  "name": "@limrun/appium-webdriveragent",
+  "version": "10.4.2-lim.1",
   "description": "Package bundling WebDriverAgent",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -71,7 +71,7 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "@appium/base-driver": "^10.0.0-rc.1",
+    "@appium/base-driver": "npm:@limrun/base-driver@10.1.2-lim.2",
     "@appium/strongbox": "^1.0.0-rc.1",
     "@appium/support": "^7.0.0-rc.1",
     "appium-ios-device": "^3.0.0",
