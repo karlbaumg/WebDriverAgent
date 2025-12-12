@@ -88,6 +88,7 @@ export interface WebDriverAgentArgs {
   resultBundleVersion?: string;
   reqBasePath?: string;
   launchTimeout?: number;
+  wdaRequestHeaders?: Record<string, string>;
 }
 
 export interface AppleDevice {
@@ -126,4 +127,5 @@ export interface XcodeBuildArgs {
   allowProvisioningDeviceRegistration?: boolean;
   resultBundlePath?: string;
   resultBundleVersion?: string;
+  wdaRequestHeaders?: Record<string, string>;
 }

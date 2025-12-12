@@ -184,6 +184,23 @@ describe('get url', function () {
   });
 });
 
+describe('wdaRequestHeaders', function () {
+  it('should pass custom request headers to JWProxy and NoSessionProxy', function () {
+    const args = Object.assign({}, fakeConstructorArgs);
+    const wdaRequestHeaders = {
+      'X-Custom-Header': 'foo',
+      'Another-Header': 'bar',
+    };
+    args.wdaRequestHeaders = wdaRequestHeaders;
+
+    const agent = new WebDriverAgent({}, args);
+    agent.setupProxies('mysession');
+
+    agent.jwproxy.headers.should.eql(wdaRequestHeaders);
+    agent.noSessionProxy.headers.should.eql(wdaRequestHeaders);
+  });
+});
+
 describe('setupCaching()', function () {
   let wda;
   let wdaStub;
